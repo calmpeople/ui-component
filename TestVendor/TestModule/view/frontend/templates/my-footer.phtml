@@ -1,0 +1,95 @@
+<div id="my-footer" class="my-footer" data-bind="scope: 'myfooter-ui'">
+    <!-- ko template: getTemplate() -->
+    ...Loading
+    <!-- /ko -->
+</div>
+
+
+<script type="text/x-magento-init">
+    {
+        "#my-footer": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "myfooter-ui": {
+                        "component": "TestVendor_TestModule/js/myfooter-ui",
+                        "template" : "TestVendor_TestModule/myfooter"
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<style>
+    .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .desktop-button {
+        max-width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ccc;
+        cursor: pointer;
+    }
+    .desktop-button:hover {
+        background: #ddd;
+    }
+    .game-button-guess,
+    .game-button-restart {
+        margin: 20px 20px 10px 0;
+        padding: 5px 10px;
+        display: inline-block;
+        background: #ccc;
+    }
+    .my-footer {
+        margin: 100px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .my-footer__modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+    }
+        .my-footer__modal:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            display: flex;
+            background: #000;
+            opacity: 0.7;
+        }
+        .my-footer__modal .modal-body-content {
+            max-width: 500px;
+            width: 90%;
+            max-height: 90%;
+            padding: 70px 50px 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+        }
+    @media (max-width: 767px) {
+        .my-footer {
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,13 @@
+<button class="desktop-button" id="button-2" data-bind="click: toggleModal">
+    <span data-bind="text: textButton">...</span>
+</button>
+
+<div id="modal-2" class="my-footer__modal" data-bind="visible: isVisibleModal">
+    <div class="modal-body-content">
+        <button class="close-modal" data-bind="click: toggleModal">Close</button>
+        <input type="number" data-bind="value: inputValue" name="game-input" class="game-input" autoselect />
+        <buton class="game-button-guess" data-bind="click: guess">Guess</buton>
+        <buton class="game-button-restart" data-bind="click: restart">Restart</buton>
+        <div class="game-message" data-bind="visible: isVisibleMessage, text: textMessage"></div>
+    </div>
+</div>
